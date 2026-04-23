@@ -6,12 +6,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     formats: ["image/avif", "image/webp"],
   },
-  webpack: {
-    externals: {
-      "pg": "pg",
-      "@prisma/client": "@prisma/client",
-    },
-  },
+  turbopack: {},
 };
 
 export default nextConfig;
