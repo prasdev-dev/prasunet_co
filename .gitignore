@@ -38,3 +38,8 @@ yarn-error.log*
 
 # OS
 Thumbs.db
+
+# Backup files
+*.backup
+*_backup.*
+*.bak
