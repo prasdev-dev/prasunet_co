@@ -1,9 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  output: "standalone",
   images: {
     unoptimized: true,
+    formats: ["image/avif", "image/webp"],
+  },
+  webpack: {
+    externals: {
+      "pg": "pg",
+      "@prisma/client": "@prisma/client",
+    },
   },
 };
 
