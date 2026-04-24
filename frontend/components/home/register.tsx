@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import { ArrowRight, BriefcaseBusiness, Handshake, LineChart } from "lucide-react";
 
 const RegisterSection = () => {
@@ -53,19 +52,16 @@ const RegisterSection = () => {
           </button>
         </div>
 
-        <div className="hidden lg:flex justify-center">
-          <div className="relative w-[420px] h-[320px] rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white">
-            <Image
-              src="/businessgrowteam.webp"
-              alt="Business growth and partnership"
-              fill
-              className="object-cover"
+        <div className="hidden lg:flex justify-center items-center w-full">
+          <div className="absolute w-[500px] h-[380px]">
+            <video
+              src="/videohomepage1.mp4"
+              autoPlay
+              loop
+              muted
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/35 to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white/90 p-3 border border-slate-200">
-              <p className="text-sm font-semibold text-slate-900">Enterprise Business Enablement</p>
-              <p className="text-xs text-slate-600 mt-1">Scale with strategy, partnerships, and reliable execution.</p>
-            </div>
+
           </div>
         </div>
       </div>
