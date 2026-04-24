@@ -1,0 +1,22 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "prasunet-website"
+main = "frontend/.next/server/middleware.js"
+compatibility_date = "2024-12-16"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "prasunet-website"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "default"
+
+[build]
+command = "npm run build --prefix=frontend"
+cwd = "./"
+watch_paths = ["frontend/app/**/*.{ts,tsx}", "frontend/public/**"]
+
+[build.upload]
+format = "modules"
+directory = "frontend/.next"
+main = ".next/server/middleware.js"
