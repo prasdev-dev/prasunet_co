@@ -95,6 +95,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold text-gray-900">Services</h3>
             <ul className="space-y-2">
               {[
+                { name: "View All Services", path: "/service" },
                 { name: "Software Development", path: "/service/softwaredevelopment" },
                 { name: "Cloud Services", path: "/service/cloudservices" },
                 { name: "Cybersecurity", path: "/service/cybersecurity" },
@@ -102,7 +103,6 @@ export function Footer() {
                 { name: "Data Analytics", path: "/service/dataservices" },
                 { name: "Web Development", path: "/service/webdevelopment" },
                 { name: "Mobile Apps", path: "/service/mobileapp" },
-                { name: "View All Services", path: "/#services" },
               ].map((item) => (
                 <li key={item.name}>
                   <a href={item.path} className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
@@ -119,7 +119,6 @@ export function Footer() {
             <ul className="space-y-2">
               {[
                 { name: "About Us", path: "/about" },
-                { name: "Our Team", path: "/team" },
                 { name: "Careers", path: "/career" },
                 { name: "Business Solutions", path: "/business" },
                 { name: "Internship Program", path: "/program" },
