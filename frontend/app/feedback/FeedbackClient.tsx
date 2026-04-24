@@ -21,16 +21,6 @@ interface Result {
     feedback?: FeedbackData;
 }
 
-const firebaseConfig = {
-    apiKey: "AIzaSyA_XvAPygXMMMddn7NsqsogzDpM-FXDgeI",
-    authDomain: "cert-final-c1409.firebaseapp.com",
-    projectId: "cert-final-c1409",
-    storageBucket: "cert-final-c1409.firebasestorage.app",
-    messagingSenderId: "948127703754",
-    appId: "1:948127703754:web:03289910ff99fb33ee4a33",
-    measurementId: "G-PBNBSHK135"
-};
-
 export default function FeedbackClient() {
     const searchParams = useSearchParams();
     const token = searchParams.get('token');

@@ -285,7 +285,7 @@ const getCategory = (title: string) => {
 
 const Services = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm] = useState("");
   const [showAll, setShowAll] = useState(false);
   const filteredServices = useMemo(() => {
     const categoryMatched =

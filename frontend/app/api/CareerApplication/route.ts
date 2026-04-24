@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
     console.log('Career application submission:', { firstName, lastName, email });
 
     // Check if email already has an application
-    const { data: existingApplication, error: checkError } = await supabase
+    const { data: existingApplication } = await supabase
       .from('career_applications')
       .select('id')
       .eq('email', email.toLowerCase())
@@ -121,7 +121,7 @@ export async function POST(request: NextRequest) {
       { message: 'Application submitted successfully!', data: data?.[0] },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (error: Error | unknown) {
     console.error('Career application error:', error);
     
     // Better error messages

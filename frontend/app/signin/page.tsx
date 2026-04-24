@@ -28,8 +28,8 @@ export default function SignIn() {
     try {
       await signIn(email, password);
       router.push('/');
-    } catch (error: any) {
-      setError(error.message || 'Failed to sign in');
+    } catch (error: Error | unknown) {
+      setError(error instanceof Error ? error.message : 'Failed to sign in');
     } finally {
       setLoading(false);
     }
@@ -103,7 +103,7 @@ export default function SignIn() {
 
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Don't have an account?{' '}
+              Don&apos;t have an account?{' '}
               <Link href="/signup" className="font-medium text-blue-600 hover:text-blue-500">
                 Sign up
               </Link>

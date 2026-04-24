@@ -1565,7 +1565,7 @@ const CareerPage = () => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [selectedCountryCode, setSelectedCountryCode] = useState<string>("+91");
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
-  const [selectedJob, setSelectedJob] = useState<any>(null);
+  const [selectedJob, setSelectedJob] = useState<typeof jobs[0] | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedDepartment, setSelectedDepartment] = useState<string>("All");
   const [selectedLevel, setSelectedLevel] = useState<string>("All");
@@ -1742,7 +1742,7 @@ const CareerPage = () => {
                 Application Submitted!
               </h2>
               <p className="mt-3 text-sm text-gray-700">
-                Thank you for your interest in joining Prasunet. We'll review your application and contact you soon.
+                Thank you for your interest in joining Prasunet. We&apos;ll review your application and contact you soon.
               </p>
             </div>
           </div>
@@ -1771,7 +1771,7 @@ const CareerPage = () => {
         <div className="relative max-w-6xl mx-auto text-center">
           <h1 className="text-6xl font-bold mb-6">Shape the Future with Us</h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Join a global team of innovators, problem-solvers, and technology leaders. At Prasunet, we don't just build software—we create solutions that transform industries and impact millions of lives.
+            Join a global team of innovators, problem-solvers, and technology leaders. At Prasunet, we don&apos;t just build software—we create solutions that transform industries and impact millions of lives.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button

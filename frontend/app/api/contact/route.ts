@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
       data: data?.[0]
     });
 
-  } catch (error: any) {
+  } catch (error: Error | unknown) {
     console.error('Contact API error:', error);
     
     // Better error messages

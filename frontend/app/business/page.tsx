@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { CheckCircle, Zap, Shield, Users, Target, TrendingUp, ArrowRight, Star, Award, Globe, Code, Cloud, Lock } from 'lucide-react';
+import { Zap, TrendingUp, ArrowRight, Globe, Code, Cloud, Lock } from 'lucide-react';
 import Navbar from "@/components/home/header/navbar";
 import Footer from "@/components/home/footer-section";
 export default function BusinessPage() {
@@ -275,7 +275,7 @@ export default function BusinessPage() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-5xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-            <p className="text-xl text-gray-600">Let's discuss how we can accelerate your digital transformation</p>
+            <p className="text-xl text-gray-600">Let&apos;s discuss how we can accelerate your digital transformation</p>
           </div>
 
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-12 rounded-xl border border-blue-200">

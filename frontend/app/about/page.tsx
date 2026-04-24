@@ -5,17 +5,7 @@ import Footer from "@/components/home/footer-section";
 import { motion } from "framer-motion";
 
 const About = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const cultureVideoRef = useRef<HTMLVideoElement>(null);
-
-  // Play company mockup video
-  const handlePlay = () => {
-    const video = document.getElementById("company-video") as HTMLVideoElement;
-    if (video) {
-      video.play();
-      setIsPlaying(true);
-    }
-  };
 
   // Auto-play culture video programmatically
   useEffect(() => {
@@ -586,7 +576,7 @@ const About = () => {
                       <span key={i} className="text-yellow-400 text-xl">★</span>
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.testimonial}"</p>
+                  <p className="text-gray-700 mb-6 italic leading-relaxed">&ldquo;{testimonial.testimonial}&rdquo;</p>
                   <div>
                     <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
                     <p className="text-indigo-600 text-sm">{testimonial.role}</p>

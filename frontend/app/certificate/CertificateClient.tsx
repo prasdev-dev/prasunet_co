@@ -58,7 +58,7 @@ export default function CertificateClient() {
           };
 
           setResult({ status: 'Verified', certificate: certificateData });
-        } catch (error) {
+        } catch {
           setResult({ error: 'An error occurred during verification' });
         }
       };

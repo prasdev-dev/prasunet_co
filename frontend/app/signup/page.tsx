@@ -58,8 +58,8 @@ export default function SignUp() {
       } else {
         setError('Account created successfully. You can now sign in.');
       }
-    } catch (error: any) {
-      setError(error.message || 'Failed to create account');
+    } catch (error: Error | unknown) {
+      setError(error instanceof Error ? error.message : 'Failed to create account');
     } finally {
       setLoading(false);
     }

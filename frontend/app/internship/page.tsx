@@ -1,15 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Textarea } from '@/components/ui/textarea';
-import { Loader2, CheckCircle, User, Mail, Phone, GraduationCap, Briefcase, FileText } from 'lucide-react';
+import { Loader2, CheckCircle } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import Navbar from "@/components/home/header/navbar";
 import Footer from "@/components/home/footer-section";
@@ -32,7 +31,6 @@ export default function Internship() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -88,8 +86,8 @@ export default function Internship() {
         availability: '',
         resumeLink: '',
       });
-    } catch (error: any) {
-      setError(error.message || 'Failed to submit application');
+    } catch (error: Error | unknown) {
+      setError(error instanceof Error ? error.message : 'Failed to submit application');
     } finally {
       setLoading(false);
     }
@@ -110,7 +108,7 @@ export default function Internship() {
                   Application Submitted!
                 </h2>
                 <p className="mt-3 text-sm text-gray-700">
-                  Thank you for applying to our internship program. We've received your application and will review it carefully within 5-7 business days.
+                  Thank you for applying to our internship program. We&apos;ve received your application and will review it carefully within 5-7 business days.
                 </p>
                 <p className="mt-4 text-xs text-gray-600">
                   A confirmation email has been sent to your email address.
@@ -412,7 +410,7 @@ export default function Internship() {
                 </Button>
 
                 <p className="text-center text-xs text-gray-600 pt-4">
-                  By submitting this form, you agree to our terms and privacy policy. We'll review your information carefully.
+                  By submitting this form, you agree to our terms and privacy policy. We&apos;ll review your information carefully.
                 </p>
               </form>
             </CardContent>

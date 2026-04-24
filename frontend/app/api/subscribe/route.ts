@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     console.log('Newsletter subscription attempt:', email);
 
     // Check if email already exists
-    const { data: existingSubscriber, error: checkError } = await supabase
+    const { data: existingSubscriber } = await supabase
       .from('newsletter_subscribers')
       .select('id')
       .eq('email', email.toLowerCase())
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
       },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (error: Error | unknown) {
     console.error('Newsletter subscription error:', error);
     
     // Better error messages
