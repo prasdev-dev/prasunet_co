@@ -155,55 +155,52 @@ export default function BusinessPage() {
     <div className="min-h-screen bg-white">
        <Navbar />
       {/* Hero Section */}
-      <section className="relative h-screen text-white overflow-hidden">
-        {/* Background Video */}
+      <section className="relative w-full h-screen text-white overflow-hidden">
+        {/* Background Video - Fixed positioning */}
         <video
           autoPlay
           loop
           muted
-          className="absolute inset-0 w-full h-full object-cover"
+          playsInline
+          className="fixed top-0 left-0 w-screen h-screen object-cover"
         >
           <source src="/businesshomepage.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
-        {/* Overlay for readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-transparent to-transparent"></div>
+        {/* Overlay */}
+        <div className="fixed top-0 left-0 w-screen h-screen bg-black/50 z-0"></div>
 
-        <div className="relative h-full flex items-center">
-          <div className="max-w-6xl mx-auto px-4 w-full">
-            {/* Content */}
-            <div className="z-10 max-w-2xl">
-
-              <h1 className="text-6xl font-bold leading-tight mb-6">
-                Transform Your Enterprise with Intelligent Technology
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Drive digital innovation, operational excellence, and sustainable growth with our comprehensive suite of enterprise solutions trusted by Fortune 500 companies worldwide.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center gap-2 group">
-                  Start Your Journey
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300">
-                  Watch Demo
-                </button>
+        {/* Content */}
+        <div className="relative z-10 h-screen w-full flex items-center justify-center">
+          <div className="max-w-4xl mx-auto px-4 text-center md:text-left">
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+              Transform Your Enterprise with Intelligent Technology
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
+              Drive digital innovation, operational excellence, and sustainable growth with our comprehensive suite of enterprise solutions trusted by Fortune 500 companies worldwide.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center md:justify-start gap-2 group">
+                Start Your Journey
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+              <button className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300">
+                Watch Demo
+              </button>
+            </div>
+            <div className="grid grid-cols-3 gap-6 max-w-2xl">
+              <div>
+                <div className="text-3xl font-bold text-blue-400">500+</div>
+                <div className="text-sm text-gray-300">Enterprise Clients</div>
               </div>
-              <div className="mt-12 grid grid-cols-3 gap-6">
-                <div>
-                  <div className="text-3xl font-bold text-blue-400">500+</div>
-                  <div className="text-sm text-gray-400">Enterprise Clients</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-blue-400">1K+</div>
-                  <div className="text-sm text-gray-400">Projects Delivered</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-blue-400">5+</div>
-                  <div className="text-sm text-gray-400">Years Expertise</div>
-                </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-400">1K+</div>
+                <div className="text-sm text-gray-300">Projects Delivered</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-blue-400">5+</div>
+                <div className="text-sm text-gray-300">Years Expertise</div>
               </div>
             </div>
           </div>
