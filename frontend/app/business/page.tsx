@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 import { Zap, TrendingUp, ArrowRight, Globe, Code, Cloud, Lock } from 'lucide-react';
 import Navbar from "@/components/home/header/navbar";
 import Footer from "@/components/home/footer-section";
@@ -173,9 +172,9 @@ export default function BusinessPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-transparent to-transparent"></div>
 
         <div className="relative h-full flex items-center">
-          <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center w-full">
-            {/* Left Content */}
-            <div className="z-10">
+          <div className="max-w-6xl mx-auto px-4 w-full">
+            {/* Content */}
+            <div className="z-10 max-w-2xl">
 
               <h1 className="text-6xl font-bold leading-tight mb-6">
                 Transform Your Enterprise with Intelligent Technology
@@ -206,17 +205,6 @@ export default function BusinessPage() {
                   <div className="text-sm text-gray-400">Years Expertise</div>
                 </div>
               </div>
-            </div>
-
-            {/* Right Image */}
-            <div className="relative h-full">
-              <Image
-                src="/businessgroupteam.avif"
-                alt="Enterprise Solutions"
-                fill
-                className="object-cover rounded-xl opacity-90"
-                priority
-              />
             </div>
           </div>
         </div>
