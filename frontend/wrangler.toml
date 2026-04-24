@@ -1,0 +1,13 @@
+name = "prasunet-website"
+main = "./.next/server/middleware.js"
+compatibility_date = "2024-12-16"
+
+[env.production]
+name = "prasunet-website"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "default"
+
+# Build command is handled by next-on-pages automatically
+# The command: "next build && next-on-pages" will be run by Cloudflare Pages
