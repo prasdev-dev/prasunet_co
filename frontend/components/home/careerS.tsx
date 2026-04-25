@@ -62,16 +62,20 @@ const CareerSection = () => {
         initial={{ opacity: 0, x: 40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative w-full md:w-1/2 h-72 md:h-full mt-8 md:mt-0 flex items-center justify-center z-10"
+        className="relative w-full md:w-1/2 mt-8 md:mt-0 z-10 overflow-hidden"
       >
-        <div className="relative w-[320px] h-[320px] md:w-[420px] md:h-[420px]">
+        <motion.div 
+          className="relative w-[500px] h-[350px] md:w-[700px] md:h-[450px]"
+          animate={{ x: [-200, 0, -200] }}
+          transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
+        >
           <Image
-            src="/career.png"
+            src="/careerpage.png"
             alt="Career at PRASUNET"
             fill
-            className="object-cover rounded-2xl shadow-2xl border border-slate-200"
+            className="object-cover"
           />
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );
