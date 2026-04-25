@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/lib/auth-context";
-import Chatbot from "@/components/Chatbot";
 
 import Script from "next/script"; // ✅ Import Next.js Script component
 
@@ -62,7 +61,6 @@ export default function RootLayout({
         disableTransitionOnChange
       >
         {children}
-        <Chatbot />
       </ThemeProvider>
     </AuthProvider>
   </body>
