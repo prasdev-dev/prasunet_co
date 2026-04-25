@@ -214,10 +214,20 @@ const Chatbot = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-indigo-600 to-pink-600 text-white p-3 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-indigo-600 to-pink-600 text-white p-0 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden relative"
         aria-label="Open chat"
       >
-        <MessageCircle size={20} />
+        <video
+          src="/chatbot.webm"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+          <MessageCircle size={20} className="text-white" />
+        </div>
       </motion.button>
 
       {/* Chat Window */}
