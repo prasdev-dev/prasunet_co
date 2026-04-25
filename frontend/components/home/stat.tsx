@@ -4,7 +4,7 @@ import Image from "next/image";
 import { CheckCircle2, Globe2, ShieldCheck, Timer } from "lucide-react";
 
 const metricCards = [
-  { value: "1000+", label: "Enterprise Projects", desc: "Successfully delivered over 300 complex enterprise-level projects across various industries, ensuring scalability and high performance.", icon: <CheckCircle2 className="w-5 h-5" /> },
+  { value: "1000+", label: "Enterprise Projects", desc: "Successfully delivered over 1000 complex enterprise-level projects across various industries, ensuring scalability and high performance.", icon: <CheckCircle2 className="w-5 h-5" /> },
   { value: "65+", label: "Countries Enabled", desc: "Operating in more than 65 countries worldwide, providing localized expertise and global reach for international clients.", icon: <Globe2 className="w-5 h-5" /> },
   { value: "24/7", label: "Operational Coverage", desc: "Round-the-clock support and monitoring to ensure continuous operations and rapid response to any issues.", icon: <Timer className="w-5 h-5" /> },
   { value: "100%", label: "Service Reliability", desc: "Achieving 100% service reliability through robust infrastructure, proactive maintenance, and quality assurance.", icon: <ShieldCheck className="w-5 h-5" /> },
@@ -84,7 +84,7 @@ export default function Stats() {
             {[
               {
                 title: "Project Solutions Delivered",
-                img: "/businessgroupteam.avif",
+                img: "/homepageprojectdeleivered1.png",
                 desc: "From startups to Fortune 500 companies, our solutions span industries and technologies, ensuring scalability, performance, and measurable impact.",
                 bullets: [
                   "Successfully delivered projects",
@@ -94,7 +94,7 @@ export default function Stats() {
               },
               {
                 title: "24/7 Global Operations Support",
-                img: "/callcenterteam.jpg",
+                img: "/homepage24:7support.png",
                 desc: "Our dedicated teams monitor, maintain, and optimize systems proactively, reducing downtime and maximizing productivity.",
                 bullets: [
                   "Round-the-clock monitoring",
@@ -110,13 +110,9 @@ export default function Stats() {
                 }`}
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-indigo-500" />
-                <div className="md:w-1/2 flex justify-center">
-                  <div className="w-96 h-80 rounded-[2rem] overflow-hidden shadow-lg relative border border-slate-200 bg-white hover:shadow-xl hover:scale-110 transition-all duration-300">
+                <div className="md:w-1/2 flex justify-center w-full">
+                  <div className={`w-full rounded-[2rem] overflow-hidden relative shadow-none border-none ${idx === 0 ? 'h-80 md:h-[500px]' : 'h-60 md:h-80'}`}>
                     <Image src={cs.img} alt={cs.title} fill className="object-cover" priority={true} />
-                    <div className="absolute inset-0 bg-emerald-500/0 hover:bg-emerald-500/30 transition-all duration-300"></div>
-                    <div className="absolute bottom-0 left-0 right-0 bg-gray-700/80 text-white p-3 text-center text-sm font-medium">
-                      {cs.title}
-                    </div>
                   </div>
                 </div>
 
@@ -124,13 +120,16 @@ export default function Stats() {
                   <p className="text-xs uppercase tracking-[0.14em] text-emerald-700 font-semibold mb-2">Case Highlight</p>
                   <h3 className="text-3xl font-semibold text-slate-900 mb-4">{cs.title}</h3>
                   <p className="text-slate-600 mb-6">{cs.desc}</p>
-                  <div className="space-y-3">
+                  <div className="space-y-0 pl-8 relative">
                     {cs.bullets.map((b, i) => (
-                      <div key={i} className="flex items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-200">
-                        <span className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500 text-white font-bold">
-                          {i + 1}
-                        </span>
-                        <p className="text-slate-700 text-sm">{b}</p>
+                      <div key={i} className="relative pb-8 flex items-start">
+                        {i !== cs.bullets.length - 1 && (
+                          <div className="absolute left-[-20px] top-8 w-0.5 h-8 bg-emerald-400"></div>
+                        )}
+                        <div className="absolute left-[-28px] top-0.5 w-5 h-5 rounded-full bg-emerald-500 border-4 border-white shadow-md flex items-center justify-center flex-shrink-0">
+                          <div className="w-2 h-2 rounded-full bg-white"></div>
+                        </div>
+                        <p className="text-slate-700 text-sm font-medium pt-0.5">{b}</p>
                       </div>
                     ))}
                   </div>
@@ -159,13 +158,9 @@ export default function Stats() {
                 Prasunet connects innovation with impact - no matter where your business is.
               </p>
             </div>
-            <div className="flex justify-center">
-              <div className="w-full max-w-lg h-80 rounded-2xl overflow-hidden shadow-lg border border-slate-200 relative hover:shadow-xl hover:scale-110 transition-all duration-300">
-                <Image src="/teamglobalpresence.jpg" alt="Global presence map" width={400} height={320} className="object-cover w-full h-full" />
-                <div className="absolute inset-0 bg-emerald-500/0 hover:bg-emerald-500/30 transition-all duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 bg-emerald-700/80 text-white p-3 text-center text-sm font-medium">
-                  Global Presence (65+ countries)
-                </div>
+            <div className="flex justify-center w-full">
+              <div className="w-full md:max-w-4xl h-64 md:h-80 rounded-2xl overflow-hidden">
+                <Image src="/homepageglobalpresence.png" alt="Global presence" fill className="object-cover object-center" />
               </div>
             </div>
           </div>
