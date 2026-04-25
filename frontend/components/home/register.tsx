@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ArrowRight, BriefcaseBusiness, Handshake, LineChart } from "lucide-react";
 
@@ -54,14 +55,13 @@ const RegisterSection = () => {
 
         <div className="hidden lg:flex justify-center items-center w-full">
           <div className="absolute w-[500px] h-[380px]">
-            <video
-              src="/videohomepage1.mp4"
-              autoPlay
-              loop
-              muted
-              className="w-full h-full object-cover"
+            <Image
+              src="/homepagegrowbusiness.png"
+              alt="Grow Your Business"
+              fill
+              className="object-cover"
+              priority
             />
-
           </div>
         </div>
       </div>
